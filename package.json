@@ -1,6 +1,6 @@
 {
   "name": "isogen",
-  "description": "isotope theme generator",
+  "description": "Isotope theme generator",
   "version": "0.0.0",
   "author": "Arden Rasmussen @Nedra1998",
   "bin": {
@@ -12,9 +12,13 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
     "@types/color": "^3.0.1",
+    "@types/inquirer": "^6.5.0",
+    "@types/yaml": "^1.9.7",
     "color": "^3.1.2",
     "handlebars": "^4.7.6",
-    "tslib": "^1"
+    "inquirer": "^7.1.0",
+    "tslib": "^1",
+    "yaml": "^1.9.2"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
@@ -22,6 +26,7 @@
     "eslint": "^5.13",
     "eslint-config-oclif": "^3.1",
     "eslint-config-oclif-typescript": "^0.1",
+    "globby": "^10",
     "ts-node": "^8",
     "typescript": "^3.3"
   },
@@ -30,7 +35,9 @@
   },
   "files": [
     "/bin",
-    "/lib"
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
   ],
   "homepage": "https://github.com/Nedra1998/isogen",
   "keywords": [
@@ -39,12 +46,17 @@
   "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
-    "bin": "isogen"
+    "commands": "./lib/commands",
+    "bin": "isogen",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
   },
   "repository": "Nedra1998/isogen",
   "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"
   },
