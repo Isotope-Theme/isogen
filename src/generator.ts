@@ -8,9 +8,9 @@ Handlebars.registerHelper('hex', (str: string) => Color(str).hex());
 Handlebars.registerHelper('Hex', (str: string) => Color(str).hex().substring(1));
 Handlebars.registerHelper('hsl', (str: string) => Color(str).hsl().string());
 Handlebars.registerHelper('rgb', (str: string) => Color(str).rgb().string());
-Handlebars.registerHelper('ansi', (str: string) => Color(str).ansi256().string());
-Handlebars.registerHelper('ansi256', (str: string) => Color(str).ansi256().string());
-Handlebars.registerHelper('ansi16', (str: string) => Color(str).ansi16().string());
+Handlebars.registerHelper('ansi', (str: string) => Color(str).ansi256().object().ansi256);
+Handlebars.registerHelper('ansi256', (str: string) => Color(str).ansi256().object().ansi256);
+Handlebars.registerHelper('ansi16', (str: string) => Color(str).ansi16().object().ansi16);
 
 export function generateFile(sourcePath: string, outputPath: string, args: any): boolean {
   try {
