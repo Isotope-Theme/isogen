@@ -3,11 +3,14 @@ import * as fs from 'fs'
 import * as path from 'path'
 import Color from 'color'
 
-Handlebars.registerHelper('isDefined', (str) => str !== undefined && str !== '');
-Handlebars.registerHelper('hex', (str) => Color(str).hex());
-Handlebars.registerHelper('Hex', (str) => Color(str).hex().substring(1));
-Handlebars.registerHelper('hsl', (str) => Color(str).hsl().string());
-Handlebars.registerHelper('rgb', (str) => Color(str).rgb().string());
+Handlebars.registerHelper('isDefined', (str: string) => str !== undefined && str !== '');
+Handlebars.registerHelper('hex', (str: string) => Color(str).hex());
+Handlebars.registerHelper('Hex', (str: string) => Color(str).hex().substring(1));
+Handlebars.registerHelper('hsl', (str: string) => Color(str).hsl().string());
+Handlebars.registerHelper('rgb', (str: string) => Color(str).rgb().string());
+Handlebars.registerHelper('ansi', (str: string) => Color(str).ansi256().string());
+Handlebars.registerHelper('ansi256', (str: string) => Color(str).ansi256().string());
+Handlebars.registerHelper('ansi16', (str: string) => Color(str).ansi16().string());
 
 export function generateFile(sourcePath: string, outputPath: string, args: any): boolean {
   try {
