@@ -19,7 +19,7 @@ $ npm install -g isogen
 $ isogen COMMAND
 running command...
 $ isogen (-v|--version|version)
-isogen/0.0.0 linux-x64 node-v14.2.0
+isogen/1.1.5 linux-x64 node-v13.12.0
 $ isogen --help [COMMAND]
 USAGE
   $ isogen COMMAND
@@ -28,25 +28,26 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`isogen generate [FILE]`](#isogen-generate-file)
+* [`isogen generate`](#isogen-generate)
 * [`isogen help [COMMAND]`](#isogen-help-command)
 * [`isogen new`](#isogen-new)
 
-## `isogen generate [FILE]`
+## `isogen generate`
 
 describe the command here
 
 ```
 USAGE
-  $ isogen generate [FILE]
+  $ isogen generate
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help               show CLI help
+  -o, --output=output      (required) [default: ./] path to output directory
+  -s, --scheme=scheme      [default: ../Isotope-Theme/palette.yml] path to color scheme definition
+  -t, --template=template  (required) [default: template] path to template directory
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/Nedra1998/isogen/blob/v0.0.0/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/Nedra1998/isogen/blob/v1.1.5/src/commands/generate.ts)_
 
 ## `isogen help [COMMAND]`
 
@@ -77,9 +78,9 @@ OPTIONS
   -h, --help               show CLI help
   -n, --name=name          name of program/project
   -o, --output=output      path to output file/directory
-  -t, --template=template  (required) path to template file/directory
+  -t, --template=template  path to template file/directory
   -u, --url=url            url for program/project
 ```
 
-_See code: [src/commands/new.ts](https://github.com/Nedra1998/isogen/blob/v0.0.0/src/commands/new.ts)_
+_See code: [src/commands/new.ts](https://github.com/Nedra1998/isogen/blob/v1.1.5/src/commands/new.ts)_
 <!-- commandsstop -->
