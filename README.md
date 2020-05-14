@@ -19,7 +19,7 @@ $ npm install -g isogen
 $ isogen COMMAND
 running command...
 $ isogen (-v|--version|version)
-isogen/1.0.1 linux-x64 node-v14.2.0
+isogen/1.1.5 linux-x64 node-v13.12.0
 $ isogen --help [COMMAND]
 USAGE
   $ isogen COMMAND
@@ -47,7 +47,7 @@ OPTIONS
   -t, --template=template  (required) [default: template] path to template directory
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/Nedra1998/isogen/blob/v1.0.1/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/Nedra1998/isogen/blob/v1.1.5/src/commands/generate.ts)_
 
 ## `isogen help [COMMAND]`
 
@@ -82,5 +82,5 @@ OPTIONS
   -u, --url=url            url for program/project
 ```
 
-_See code: [src/commands/new.ts](https://github.com/Nedra1998/isogen/blob/v1.0.1/src/commands/new.ts)_
+_See code: [src/commands/new.ts](https://github.com/Nedra1998/isogen/blob/v1.1.5/src/commands/new.ts)_
 <!-- commandsstop -->

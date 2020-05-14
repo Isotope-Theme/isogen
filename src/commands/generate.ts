@@ -25,7 +25,6 @@ export default class Generate extends Command {
     var args: any = {...scheme};
     args['year'] = (new Date()).getFullYear();
     args['githubOrg'] = 'https://github.com/Isotope-Theme'
-    console.log(args);
     generateDirectory(flags.template, flags.output, args);
   }
 }
